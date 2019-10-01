@@ -23,7 +23,7 @@ pipeline {
         }
         stage('Happy end') {
             steps {
-                echo "And they had been living happy"
+                echo "Happy end!"
             }
         }
     }
