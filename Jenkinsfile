@@ -1,3 +1,5 @@
+@Library('common-library') _
+
 pipeline {
     agent any
     stages {
@@ -8,6 +10,7 @@ pipeline {
         }
         stage('Build') {
             steps {
+                echo printInfo(name: env.BRANCH_NAME)
                 echo "I'm building"
             }
         }
