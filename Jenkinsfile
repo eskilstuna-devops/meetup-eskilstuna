@@ -8,6 +8,7 @@ pipeline {
         }
         stage('Build') {
             steps {
+                echo printInfo()
                 echo "I'm building"
             }
         }
@@ -38,4 +39,14 @@ pipeline {
             echo "Celebration!"
         }
     }
+}
+
+def printInfo() {
+    def message
+    if(env.BRANCH_NAME == 'master') {
+        message = "I'm going to build on master"
+    } else {
+        message = "I'm going to build on ${env.BRANCH_NAME}"
+    }
+    return message
 }
