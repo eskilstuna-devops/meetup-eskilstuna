@@ -1,5 +1,5 @@
-@Library('common-library') _
-@Library('aha') _
+@Library('common-library')
+@Library('aha')
 
 pipeline {
     agent any
